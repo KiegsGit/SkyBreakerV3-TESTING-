@@ -1,0 +1,20 @@
+{
+	"schemaVersion": 1,
+	"id": "skybreaker",
+	"version": "${version}",
+	"name": "Skybreaker: Orbital Arsenal",
+	"description": "Orbital Railgun, Satellite Laser, Meteor Barrage and Singularity Cannon as realistic remotes, with cinematic orbital strikes and custom sound.",
+	"authors": ["Skybreaker"],
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["com.skybreaker.SkybreakerMod"],
+		"client": ["com.skybreaker.client.SkybreakerClient"]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.0",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
