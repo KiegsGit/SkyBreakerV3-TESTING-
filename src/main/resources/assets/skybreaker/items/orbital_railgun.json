@@ -1,0 +1,29 @@
+{
+ "model": {
+  "type": "minecraft:range_dispatch",
+  "property": "minecraft:cooldown",
+  "entries": [
+   {
+    "threshold": 0.001,
+    "model": {
+     "type": "minecraft:model",
+     "model": "skybreaker:item/orbital_railgun",
+     "tints": [
+      {
+       "type": "minecraft:constant",
+       "value": 4210760
+      },
+      {
+       "type": "minecraft:constant",
+       "value": 16719904
+      }
+     ]
+    }
+   }
+  ],
+  "fallback": {
+   "type": "minecraft:model",
+   "model": "skybreaker:item/orbital_railgun"
+  }
+ }
+}
