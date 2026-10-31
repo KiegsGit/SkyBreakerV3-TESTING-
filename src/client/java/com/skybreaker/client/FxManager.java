@@ -145,14 +145,14 @@ final class FxManager {
 		if (CinematicHud.orbitActive()) {
 			// orbit shot: one full lap around the player (third-person camera sits behind the view direction),
 			// dipping to a low hero angle mid-lap and ending aimed at the target
-			float t = CinematicHud.orbitProgress();
-			float ease = t * t * (3f - 2f * t);
+			float lap = CinematicHud.orbitProgress();
+			float ease = lap * lap * (3f - 2f * lap);
 			float y0 = CinematicHud.orbitStartYaw();
 			float p0 = CinematicHud.orbitStartPitch();
 			float toTarget = Mth.wrapDegrees(yaw - y0);
 			float pEnd = Mth.clamp(pitch, -30.0f, 45.0f);
 			player.setYRot(y0 + (toTarget + 360.0f) * ease);
-			player.setXRot(Mth.clamp(p0 + (pEnd - p0) * ease - 16.0f * (float) Math.sin(Math.PI * t), -90.0f, 90.0f));
+			player.setXRot(Mth.clamp(p0 + (pEnd - p0) * ease - 16.0f * (float) Math.sin(Math.PI * lap), -90.0f, 90.0f));
 			return;
 		}
 		float k = 0.10f;
